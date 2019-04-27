@@ -1,0 +1,50 @@
+
+$primary: #624cc1;
+$contrast: #00d1b2;
+$black: #06040c;
+$white: #ffffff;
+$darkerWhite: #eff3f4;
+
+// $primary colour classes
+
+.is-primary {
+    background-color: $primary !important;
+}
+
+.colour-primary {
+    color: $primary !important;
+}
+
+// $contrast colour classes
+
+.is-contrast {
+    background-color: $contrast !important;
+    border: $contrast !important;
+}
+
+.colour-contrast {
+    color: $contrast !important;
+}
+
+.btn-contrast {
+    &:hover {
+        background-color: #02c7a9 !important;
+    }
+}
+
+// $black colour classes
+
+.is-black {
+    background-color: $black !important;
+}
+
+.colour-black {
+    color: $black !important;
+}
+
+// $white colour classes
+
+.colour-white {
+    color: $white !important;
+}
+
