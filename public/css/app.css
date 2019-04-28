@@ -43,13 +43,6 @@
   font-weight: 700;
 }
 
-html,
-body {
-  background: #eff3f4;
-  font-family: "Roboto", serif;
-  color: #06040c;
-}
-
 .navbar-logo {
   padding: 15px 0;
 }
@@ -111,12 +104,14 @@ body {
 }
 
 .intro {
-  padding: 5rem 0;
+  padding: 5rem 15px 5rem 15px;
   text-align: center;
 }
 
-.sandbox {
-  padding: 5rem 0;
+@media screen and (min-width: 1216px) {
+  .intro {
+    padding: 5rem 0;
+  }
 }
 
 .tile.notification {
@@ -149,10 +144,200 @@ body {
   color: #ffffff !important;
 }
 
-@media screen and (max-width: 768px) {
-  .hero.is-bold .navbar-menu {
-    background: transparent;
-    box-shadow: none;
+.hero.is-bold .navbar-menu {
+  background: transparent;
+  box-shadow: none;
+}
+
+.info-tiles {
+  margin: 1rem 0;
+  padding: 0 15px 5rem 15px;
+}
+
+@media screen and (min-width: 1216px) {
+  .info-tiles {
+    padding: 0 0 5rem 0;
   }
+}
+
+.info-tiles .subtitle {
+  font-weight: 300;
+  color: #8f99a3;
+}
+
+.is-primary {
+  background-color: #624cc1 !important;
+}
+
+.colour-primary {
+  color: #624cc1 !important;
+}
+
+.is-contrast {
+  background-color: #00d1b2 !important;
+  border: #00d1b2 !important;
+}
+
+.colour-contrast {
+  color: #00d1b2 !important;
+}
+
+.btn-contrast:hover {
+  background-color: #02c7a9 !important;
+}
+
+.is-black {
+  background-color: #06040c !important;
+}
+
+.colour-black {
+  color: #06040c !important;
+}
+
+.colour-white {
+  color: #ffffff !important;
+}
+
+.headingFont,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero.is-success {
+  background: #eff3f4;
+}
+
+.avatar {
+  margin-top: -70px;
+  padding-bottom: 20px;
+}
+
+.avatar img {
+  padding: 5px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+input {
+  font-weight: 300;
+}
+
+p {
+  font-weight: 700;
+}
+
+p.subtitle {
+  padding-top: 1rem;
+}
+
+#loginPage .form-container {
+  margin-top: 5rem;
+}
+
+.is-primary {
+  background-color: #624cc1 !important;
+}
+
+.colour-primary {
+  color: #624cc1 !important;
+}
+
+.is-contrast {
+  background-color: #00d1b2 !important;
+  border: #00d1b2 !important;
+}
+
+.colour-contrast {
+  color: #00d1b2 !important;
+}
+
+.btn-contrast:hover {
+  background-color: #02c7a9 !important;
+}
+
+.is-black {
+  background-color: #06040c !important;
+}
+
+.colour-black {
+  color: #06040c !important;
+}
+
+.colour-white {
+  color: #ffffff !important;
+}
+
+.headingFont,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero.is-success {
+  background: #eff3f4;
+}
+
+.avatar {
+  margin-top: -70px;
+  padding-bottom: 20px;
+}
+
+.avatar img {
+  padding: 5px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+input {
+  font-weight: 300;
+}
+
+p {
+  font-weight: 700;
+}
+
+p.subtitle {
+  padding-top: 1rem;
+}
+
+#registerPage .form-container {
+  height: 100vh;
+}
+
+#registerPage .box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+  #registerPage .box {
+    width: 50% !important;
+  }
+}
+
+html,
+body {
+  background: #eff3f4;
+  font-family: "Roboto", serif;
+  color: #06040c;
 }
 

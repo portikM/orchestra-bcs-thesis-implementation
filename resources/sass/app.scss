@@ -1,1 +1,10 @@
 @import 'landing';
+@import 'login';
+@import 'register';
+
+html,
+body {
+    background: $darkerWhite;
+    font-family: "Roboto", serif;
+    color: $black;
+}

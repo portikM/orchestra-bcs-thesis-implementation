@@ -1,18 +1,13 @@
 
-@import 'colours';
-@import 'typography';
+@import "colours";
+@import "typography";
+@import "breakpoints";
 
-html,
-body {
-    background: $darkerWhite;
-    font-family: "Roboto", serif;
-    color: $black;
-}
 .navbar-logo {
     padding: 15px 0;
 }
 .hero {
-    background-image: url('../images/hero.jpg');
+    background-image: url("../images/hero.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -59,11 +54,12 @@ body {
     margin-bottom: 2rem;
 }
 .intro {
-    padding: 5rem 0;
+    padding: 5rem 15px 5rem 15px;
     text-align: center;
-}
-.sandbox {
-    padding: 5rem 0;
+
+    @media screen and ($widescreen) {
+        padding: 5rem 0;
+    }
 }
 .tile.notification {
     display: flex;
@@ -87,12 +83,24 @@ body {
     background-color: $primary;
 
     a {
-        color: $white !important; 
+        color: $white !important;
     }
 }
-@media screen and (max-width: 768px) {
-    .hero.is-bold .navbar-menu {
-        background: transparent;
-        box-shadow: none;
+
+.hero.is-bold .navbar-menu {
+    background: transparent;
+    box-shadow: none;
+}
+
+.info-tiles {
+    margin: 1rem 0;
+    padding: 0 15px 5rem 15px;
+
+    @media screen and ($widescreen) {
+        padding: 0 0 5rem 0;
     }
+}
+.info-tiles .subtitle {
+    font-weight: 300;
+    color: $grey;
 }
