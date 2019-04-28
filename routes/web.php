@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('lang/{locale}', 'LangController@lang');
+
 Route::get('/', function () {
     return view('landing');
 });

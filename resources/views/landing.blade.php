@@ -24,7 +24,7 @@
                                 <a class="navbar-logo" href="{{ url('/') }}">
                                     <img src="images/orchestra-logo-header.svg" alt="Orchestra Logo" width="200">
                                 </a>
-                                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                                <div class="navbar-burger burger colour-white" data-target="navbarExampleTransparentExample">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -32,10 +32,10 @@
                             </div>
                             <div id="navbarExampleTransparentExample" class="navbar-menu">
                                 <div class="navbar-end">
-                                    <a class="navbar-item nav-item colour-white" href="#">
+                                    <a class="navbar-item nav-item colour-white" href="lang/en">
                                         <span>EN</span>
                                     </a>
-                                    <a class="navbar-item nav-item colour-white" href="#">
+                                    <a class="navbar-item nav-item colour-white" href="lang/ua">
                                         <span>UA</span>
                                     </a>
                                     @auth
@@ -51,7 +51,7 @@
                                         @if (Route::has('register'))
                                             <span class="navbar-item">
                                                 <a class="button btn-contrast is-contrast colour-white" href="{{ route('register') }}">
-                                                    <span>Register</span>
+                                                    <span>{{ trans('content/landing.nav_register') }}</span>
                                                 </a>
                                             </span>
                                         @endif
@@ -61,7 +61,7 @@
                                                 <span class="icon">
                                                     <i class="fas fa-sign-in-alt"></i>
                                                 </span>
-                                                <span>Login</span>
+                                                <span>{{ trans('content/landing.nav_login') }}</span>
                                             </a>
                                         </span>
                                     @endauth
@@ -73,47 +73,44 @@
                 </div>
                 <div class="hero-body">
                     <div class="container has-text-centered">
-                        <h1 class="h1 title">The new standard in power supply</h1>
-                        <p class="subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
+                        <h1 class="h1 title">{{ trans('content/landing.hero_tagline') }}</h1>
+                        <p class="subtitle">{{ trans('content/landing.hero_paragraph') }}</p>
                     </div>
                 </div>
             </section>
             <div class="box cta">
                 <p class="has-text-centered">
-                    <span class="tag is-contrast colour-white">New</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                    <span class="tag is-contrast colour-white">New</span>  {{ trans('content/landing.hero_cta') }}</p>
             </div>
             <section class="container">
                 <div class="intro column is-8 is-offset-2">
-                    <h2 class="h2 title">Perfect for developers or designers!</h2><br>
-                    <p class="subtitle">Vel fringilla est ullamcorper eget nulla facilisi. Nulla facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus.</p>
+                    <h2 class="h2 title">{{ trans('content/landing.intro_heading') }}</h2><br>
+                    <p class="subtitle">{{ trans('content/landing.intro_paragraph') }}</p>
                 </div>
                 <div class="info-tiles">
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <p class="headingFont title">49k</p>
-                                <p class="subtitle">Subscribers</p>
+                                <p class="subtitle">{{ trans('content/landing.tiles_subscribers') }}</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <p class="headingFont title">59k</p>
-                                <p class="subtitle">Solar panels</p>
+                                <p class="subtitle">{{ trans('content/landing.tiles_solar_panels') }}</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <p class="headingFont title">34k</p>
-                                <p class="subtitle">Wind turbines</p>
+                                <p class="subtitle">{{ trans('content/landing.tiles_wind_turbines') }}</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
                                 <p class="headingFont title">19k</p>
-                                <p class="subtitle">kWh produced daily</p>
+                                <p class="subtitle">{{ trans('content/landing.tiles_energy_produced') }}</p>
                             </article>
                         </div>
                     </div>
@@ -126,9 +123,9 @@
                             </div>
                             <div class="card-content">
                                 <div class="content">
-                                    <h4 class="h4">Tristique senectus et netus et.</h4>
-                                    <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                                    <p><a href="#">Learn more</a></p>
+                                    <h4 class="h4">{{ trans('content/landing.card_solar_panels_heading') }}</h4>
+                                    <p>{{ trans('content/landing.card_solar_panels_article') }}</p>
+                                    <p><a href="#">{{ trans('content/landing.learn_more_anchor') }}</a></p>
                                 </div>
                             </div>
                         </div>
@@ -140,10 +137,9 @@
                             </div>
                             <div class="card-content">
                                 <div class="content">
-                                    <h4 class="h4">Tempor orci dapibus ultrices in.</h4>
-                                    <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                                    sed risus.</p>
-                                    <p><a href="#">Learn more</a></p>
+                                    <h4 class="h4">{{ trans('content/landing.card_wind_turbines_heading') }}</h4>
+                                    <p>{{ trans('content/landing.card_wind_turbines_article') }}</p>
+                                    <p><a href="#">{{ trans('content/landing.learn_more_anchor') }}</a></p>
                                 </div>
                             </div>
                         </div>
@@ -155,9 +151,9 @@
                             </div>
                             <div class="card-content">
                                 <div class="content">
-                                    <h4 class="h4"> Leo integer malesuada nunc vel risus. </h4>
-                                    <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                                    <p><a href="#">Learn more</a></p>
+                                    <h4 class="h4">{{ trans('content/landing.card_control_heading') }}</h4>
+                                    <p>{{ trans('content/landing.card_control_article') }}</p>
+                                    <p><a href="#">{{ trans('content/landing.learn_more_anchor') }}</a></p>
                                 </div>
                             </div>
                         </div>
@@ -168,37 +164,27 @@
                 <div class="container">
                     <div class="columns">
                         <div class="column is-3 is-offset-2">
-                            <h2 class="h2 colour-white">Category</h2>
+                            <h2 class="h2 colour-white">{{ trans('content/landing.footer_about_heading') }}</h2>
                             <ul>
-                                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                <li><a href="#">Vestibulum errato isse</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                <li><a href="#">Aisia caisia</a></li>
-                                <li><a href="#">Murphy's law</a></li>
-                                <li><a href="#">Flimsy Lavenrock</a></li>
-                                <li><a href="#">Maven Mousie Lavender</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_about_anchor_company') }}</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_about_anchor_partners') }}</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_about_anchor_contact') }}</a></li>
                             </ul>
                         </div>
                         <div class="column is-3">
-                            <h2 class="h2 colour-white">Category</h2>
+                            <h2 class="h2 colour-white">{{ trans('content/landing.footer_law_heading') }}</h2>
                             <ul>
-                                <li><a href="#">Labore et dolore magna aliqua</a></li>
-                                <li><a href="#">Kanban airis sum eschelor</a></li>
-                                <li><a href="#">Modular modern free</a></li>
-                                <li><a href="#">The king of clubs</a></li>
-                                <li><a href="#">The Discovery Dissipation</a></li>
-                                <li><a href="#">Course Correction</a></li>
-                                <li><a href="#">Better Angels</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_law_anchor_law') }}</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_law_anchor_equipment') }}</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_about_anchor_terms') }}</a></li>
                             </ul>
                         </div>
                         <div class="column is-4">
-                            <h2 class="h2 colour-white">Category</h2>
+                            <h2 class="h2 colour-white">{{ trans('content/landing.footer_info_heading') }}</h2>
                             <ul>
-                                <li><a href="#">Objects in space</a></li>
-                                <li><a href="#">Playing cards with coyote</a></li>
-                                <li><a href="#">Goodbye Yellow Brick Road</a></li>
-                                <li><a href="#">The Garden of Forking Paths</a></li>
-                                <li><a href="#">Future Shock</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_info_anchor_contribution') }}</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_info_anchor_international') }}</a></li>
+                                <li><a href="#">{{ trans('content/landing.footer_info_anchor_products') }}</a></li>
                             </ul>
                         </div>
                     </div>
