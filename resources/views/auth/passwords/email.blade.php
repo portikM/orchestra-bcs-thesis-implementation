@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
+@section('titile', 'Password reset')
+
 @section('content')
-<section class="hero is-success is-fullheight" id="loginPage">
+<section class="hero is-success is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
             <div class="column is-8 is-offset-2">     
                 <div class="box">
+                    <h3 class="subtitle h1 colour-black">Please provide your email</h3>
                     <form method="POST" action="{{ route('password.email') }}">
-                        <p class="subtitle colour-black">Please provide your email.</p>
                         @csrf
                         <div class="field">
                             <div class="control">
