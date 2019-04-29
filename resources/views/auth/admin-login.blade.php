@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('titile', 'Login')
+@section('titile', 'Admin Login')
 
 @section('content')
 <section class="hero is-success is-fullheight" id="loginPage">
     <div class="hero-body">
         <div class="container has-text-centered">
             <div class="column is-8 is-offset-2">
-                <h3 class="title h1 colour-black">{{ trans('content/login.heading') }}</h3>
-                <p class="subtitle colour-black">{{ trans('content/login.line') }}</p>
+                <h3 class="title h1 colour-black">{{ trans('content/admin-login.heading') }}</h3>
+                <p class="subtitle colour-black">{{ trans('content/admin-login.line') }}</p>
                 <div class="box form-container">
                     <figure class="avatar">
-                        <img src="images/user-placeholder.png" alt="User Icon">
+                        <img src="../images/admin-placeholder.png" alt="User Icon">
                     </figure>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('admin.login.submit') }}">
                         @csrf
                         @if ($errors->has('email'))
                             <span class="invalid-feedback" role="alert">
@@ -42,11 +42,6 @@
                         <button class="button is-block is-contrast is-large is-fullwidth colour-white btn-contrast">{{ trans('content/login.button') }}</button>
                     </form>
                 </div>
-                <p class="colour-black">
-                    <a href="{{ route('register') }}">{{ trans('content/login.register_anchor') }}</a> &nbsp;·&nbsp;
-                    <a href="{{ route('password.request') }}">{{ trans('content/login.forgot_password_anchor') }}</a> &nbsp;·&nbsp;
-                    <a href="#">{{ trans('content/login.help_anchor') }}</a>
-                </p>
             </div>
         </div>
     </div>

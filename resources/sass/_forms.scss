@@ -27,3 +27,9 @@ p {
 p.subtitle {
     padding-top: 1rem;
 }
+.invalid-feedback {
+    color: $red;
+}
+.is-invalid {
+    border-color: $red;
+}

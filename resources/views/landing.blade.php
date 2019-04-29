@@ -38,44 +38,67 @@
                                     <a class="navbar-item nav-item colour-white" href="lang/ua">
                                         <span>UA</span>
                                     </a>
-                                    @auth
-                                        <span class="navbar-item">
-                                            <a class="button btn-contrast is-contrast colour-white" href="{{ url('/dashboard') }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-home"></i>
-                                                </span>
-                                                <span>{{ Auth::user()->first_name }}</span>
-                                            </a>
-                                        </span>
-                                        <span class="navbar-item">
-                                            <a class="button is-white is-outlined" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                                <span class="icon">
-                                                    <i class="fas fa-sign-out-alt"></i>
-                                                </span>
-                                                <span>{{ trans('content/landing.nav_logout') }}</span>
-                                            </a>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                                @csrf
-                                            </form>
-                                        </span>
-                                    @else
-                                        @if (Route::has('register'))
+                                    @if (Auth::check())
+                                        @auth
                                             <span class="navbar-item">
-                                                <a class="button btn-contrast is-contrast colour-white" href="{{ route('register') }}">
-                                                    <span>{{ trans('content/landing.nav_register') }}</span>
+                                                <a class="button btn-contrast is-contrast colour-white" href="{{ url('/dashboard') }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-home"></i>
+                                                    </span>
+                                                    <span>{{ Auth::user()->first_name }}</span>
                                                 </a>
                                             </span>
-                                        @endif
-
+                                            <span class="navbar-item">
+                                                <a class="button is-white is-outlined" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    <span class="icon">
+                                                        <i class="fas fa-sign-out-alt"></i>
+                                                    </span>
+                                                    <span>{{ trans('content/landing.nav_logout') }}</span>
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </span>
+                                        @endauth
+                                    @else
+                                        @auth('admin')
                                         <span class="navbar-item">
-                                            <a class="button is-white is-outlined" href="{{ route('login') }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-sign-in-alt"></i>
+                                                <a class="button btn-contrast is-contrast colour-white" href="{{ url('/admin') }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-home"></i>
+                                                    </span>
+                                                    <span>{{ trans('content/landing.nav_dashboard') }}</span>
+                                                </a>
+                                            </span>
+                                            <span class="navbar-item">
+                                                <a class="button is-white is-outlined" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                    <span class="icon">
+                                                        <i class="fas fa-sign-out-alt"></i>
+                                                    </span>
+                                                    <span>{{ trans('content/landing.nav_logout') }}</span>
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </span>
+                                        @else
+                                            @if (Route::has('register'))
+                                                <span class="navbar-item">
+                                                    <a class="button btn-contrast is-contrast colour-white" href="{{ route('register') }}">
+                                                        <span>{{ trans('content/landing.nav_register') }}</span>
+                                                    </a>
                                                 </span>
-                                                <span>{{ trans('content/landing.nav_login') }}</span>
-                                            </a>
-                                        </span>
-                                    @endauth
+                                            @endif
+                                            <span class="navbar-item">
+                                                <a class="button is-white is-outlined" href="{{ route('login') }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-sign-in-alt"></i>
+                                                    </span>
+                                                    <span>{{ trans('content/landing.nav_login') }}</span>
+                                                </a>
+                                            </span>
+                                        @endauth
+                                    @endif
                                     </div>
                                 </div>
                             </div>

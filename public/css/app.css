@@ -248,6 +248,14 @@ p.subtitle {
   padding-top: 1rem;
 }
 
+.invalid-feedback {
+  color: #f85167;
+}
+
+.is-invalid {
+  border-color: #f85167;
+}
+
 #loginPage .form-container {
   margin-top: 5rem;
 }

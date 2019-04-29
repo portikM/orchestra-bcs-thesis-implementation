@@ -12,45 +12,43 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'first_name' => 'Admin',
-            'last_name' => 'Orchestra',
-            'email' => 'admin@orchestra.com',
-            'password' => bcrypt('password')
-        ]);
-
-        DB::table('users')->insert([
             'first_name' => 'John',
             'last_name' => 'Bennett',
             'email' => 'subscriber1@orchestra.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'subscriber' => '1'
         ]);
 
         DB::table('users')->insert([
             'first_name' => 'Marco',
             'last_name' => 'Deluca',
             'email' => 'subscriber2@orchestra.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'subscriber' => '1'
         ]);
 
         DB::table('users')->insert([
             'first_name' => 'Rob',
             'last_name' => 'Haaf',
             'email' => 'subscriber3@orchestra.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'subscriber' => '1'
         ]);
 
         DB::table('users')->insert([
             'first_name' => 'Іван',
             'last_name' => 'Сірко',
             'email' => 'subscriber4@orchestra.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'subscriber' => '1'
         ]);
 
         DB::table('users')->insert([
             'first_name' => 'Богдан',
             'last_name' => 'Хмельницький',
             'email' => 'subscriber5@orchestra.com',
-            'password' => bcrypt('password')
+            'password' => bcrypt('password'),
+            'subscriber' => '1'
         ]);
 
         DB::table('users')->insert([
