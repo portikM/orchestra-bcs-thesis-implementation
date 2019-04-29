@@ -40,12 +40,23 @@
                                     </a>
                                     @auth
                                         <span class="navbar-item">
-                                            <a class="button is-white is-outlined" href="{{ url('/dashboard') }}">
+                                            <a class="button btn-contrast is-contrast colour-white" href="{{ url('/dashboard') }}">
                                                 <span class="icon">
                                                     <i class="fas fa-home"></i>
                                                 </span>
-                                                <span>Home</span>
+                                                <span>{{ Auth::user()->first_name }}</span>
                                             </a>
+                                        </span>
+                                        <span class="navbar-item">
+                                            <a class="button is-white is-outlined" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                <span class="icon">
+                                                    <i class="fas fa-sign-out-alt"></i>
+                                                </span>
+                                                <span>{{ trans('content/landing.nav_logout') }}</span>
+                                            </a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                            </form>
                                         </span>
                                     @else
                                         @if (Route::has('register'))
