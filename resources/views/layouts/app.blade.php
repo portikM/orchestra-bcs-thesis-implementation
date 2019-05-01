@@ -9,9 +9,6 @@
 
     <title>@yield('titile')</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&#124;Roboto" rel="stylesheet">
     <!-- Bulma Version 0.7.4-->
@@ -26,5 +23,8 @@
         @yield('content')
     
     </main>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/bulma.js') }}"></script>
 </body>
 </html>
