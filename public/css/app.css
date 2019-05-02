@@ -370,7 +370,7 @@ nav.navbar#dashboardNav .navbar-link {
 
 .hero.welcome.is-info {
   background: #36d1dc;
-  background: linear-gradient(to right, #5b86e5, #36d1dc);
+  background: linear-gradient(to right, #624cc1, transparent);
 }
 
 .hero.welcome .title,
@@ -392,9 +392,23 @@ nav.navbar#dashboardNav .navbar-link {
   margin-bottom: 0;
 }
 
-.events-card .card-table {
-  max-height: 250px;
+.system-card .card-table {
+  max-height: 350px;
   overflow-y: scroll;
+}
+
+#weatherWidget .card-content {
+  padding: 0;
+  text-align: center;
+}
+
+#weatherWidget .card-content .content {
+  margin: 0 auto;
+  padding-bottom: 7px;
+}
+
+#weatherWidget .card-content .content iframe {
+  width: 100% !important;
 }
 
 html,

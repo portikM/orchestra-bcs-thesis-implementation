@@ -19,7 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::middleware('user-admin')->group(function () {
+    Route::get('/subscriber-system/{id}', 'SubscriberController@system')->name('subscriber-system');
+});
+
 
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

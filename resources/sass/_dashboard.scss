@@ -57,8 +57,8 @@ nav.navbar#dashboardNav {
 }
 .hero.welcome.is-info {
     background: #36d1dc;
-    background: -webkit-linear-gradient(to right, #5b86e5, #36d1dc);
-    background: linear-gradient(to right, #5b86e5, #36d1dc);
+    background: -webkit-linear-gradient(to right, $primary, transparent);
+    background: linear-gradient(to right, $primary, transparent);
 }
 .hero.welcome .title,
 .hero.welcome .subtitle {
@@ -77,7 +77,21 @@ nav.navbar#dashboardNav {
 .card-table .table {
     margin-bottom: 0;
 }
-.events-card .card-table {
-    max-height: 250px;
+.system-card .card-table {
+    max-height: 350px;
     overflow-y: scroll;
+}
+#weatherWidget{
+    .card-content {
+        padding: 0;
+        text-align: center;
+        .content {
+            margin: 0 auto;
+            padding-bottom: 7px;
+            
+            iframe {
+                width: 100% !important;
+            }
+        } 
+    }
 }

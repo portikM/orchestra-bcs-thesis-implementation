@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('titile', 'Login')
+@section('title', 'Login')
 
 @section('content')
 <section class="hero is-success is-fullheight" id="loginPage">

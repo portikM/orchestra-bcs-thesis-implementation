@@ -7,6 +7,5 @@ console.log("hello");
     burger.addEventListener('click', function() {
         burger.classList.toggle('is-active');
         menu.classList.toggle('is-active');
-        
     });
 })();

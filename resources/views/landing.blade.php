@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('titile', 'Orchestra')
+@section('title', 'Orchestra')
 
 @section('content')
 <section class="hero is-medium is-bold">

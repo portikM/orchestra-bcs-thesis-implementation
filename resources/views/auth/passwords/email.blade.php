@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('titile', 'Password reset')
+@section('title', 'Password reset')
 
 @section('content')
 <section class="hero is-success is-fullheight">
