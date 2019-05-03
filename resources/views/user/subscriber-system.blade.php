@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Your system')
+@section('title', 'Your System')
 
 @section('content')
 
@@ -18,8 +18,12 @@
         <div class="column is-9">
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <ul>
-                    <li><a href="{{ url('/') }}">Orchestra</a></li>
-                    <li class="is-active"><a href="/subscriber-system/{{Auth::user()->id}}" aria-current="page">Your System</a></li>
+                    @auth('admin')
+                    <li><a>{{ $currentUser->first_name }} {{ $currentUser->last_name }}</a></li>
+                    @else
+                    <li><a href="{{ url('/dashboard') }}">Orchestra</a></li>
+                    @endauth
+                    <li class="is-active"><a aria-current="page">Your System</a></li>
                 </ul>
             </nav>
             <div class="columns">

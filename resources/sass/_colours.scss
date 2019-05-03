@@ -17,6 +17,12 @@ $red: #f85167;
     color: $primary !important;
 }
 
+.btn-primary {
+    &:hover {
+        background-color: #523cb3 !important;
+    }
+}
+
 // $contrast colour classes
 
 .is-contrast {

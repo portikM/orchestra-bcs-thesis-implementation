@@ -6,6 +6,10 @@
   color: #624cc1 !important;
 }
 
+.btn-primary:hover {
+  background-color: #523cb3 !important;
+}
+
 .is-contrast {
   background-color: #00d1b2 !important;
   border: #00d1b2 !important;
@@ -183,6 +187,10 @@
   color: #624cc1 !important;
 }
 
+.btn-primary:hover {
+  background-color: #523cb3 !important;
+}
+
 .is-contrast {
   background-color: #00d1b2 !important;
   border: #00d1b2 !important;
@@ -256,6 +264,10 @@ p.subtitle {
   border-color: #f85167;
 }
 
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color: #624cc1;
+}
+
 #loginPage .form-container {
   margin-top: 5rem;
 }
@@ -266,6 +278,10 @@ p.subtitle {
 
 .colour-primary {
   color: #624cc1 !important;
+}
+
+.btn-primary:hover {
+  background-color: #523cb3 !important;
 }
 
 .is-contrast {

@@ -40,7 +40,7 @@
                                         <span class="icon">
                                             <i class="fas fa-sign-out-alt"></i>
                                         </span>
-                                        <span>{{ trans('content/landing.nav_logout') }}</span>
+                                        <span>@lang('content/landing.nav_logout')</span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -54,7 +54,7 @@
                                         <span class="icon">
                                             <i class="fas fa-home"></i>
                                         </span>
-                                        <span>{{ trans('content/landing.nav_dashboard') }}</span>
+                                        <span>@lang('content/landing.nav_dashboard')</span>
                                     </a>
                                 </span>
                                 <span class="navbar-item">
@@ -62,7 +62,7 @@
                                         <span class="icon">
                                             <i class="fas fa-sign-out-alt"></i>
                                         </span>
-                                        <span>{{ trans('content/landing.nav_logout') }}</span>
+                                        <span>@lang('content/landing.nav_logout')</span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -72,7 +72,7 @@
                                 @if (Route::has('register'))
                                     <span class="navbar-item">
                                         <a class="button btn-contrast is-contrast colour-white" href="{{ route('register') }}">
-                                            <span>{{ trans('content/landing.nav_register') }}</span>
+                                            <span>@lang('content/landing.nav_register')</span>
                                         </a>
                                     </span>
                                 @endif
@@ -81,7 +81,7 @@
                                         <span class="icon">
                                             <i class="fas fa-sign-in-alt"></i>
                                         </span>
-                                        <span>{{ trans('content/landing.nav_login') }}</span>
+                                        <span>@lang('content/landing.nav_login')</span>
                                     </a>
                                 </span>
                             @endauth
@@ -94,44 +94,44 @@
     </div>
     <div class="hero-body">
         <div class="container has-text-centered">
-            <h1 class="h1 title">{{ trans('content/landing.hero_tagline') }}</h1>
-            <p class="subtitle">{{ trans('content/landing.hero_paragraph') }}</p>
+            <h1 class="h1 title">@lang('content/landing.hero_tagline')</h1>
+            <p class="subtitle">@lang('content/landing.hero_paragraph')</p>
         </div>
     </div>
 </section>
 <div class="box cta">
     <p class="has-text-centered">
-        <span class="tag is-contrast colour-white">New</span>  {{ trans('content/landing.hero_cta') }}</p>
+        <span class="tag is-contrast colour-white">New</span>  @lang('content/landing.hero_cta')</p>
 </div>
 <section class="container">
     <div class="intro column is-8 is-offset-2">
-        <h2 class="h2 title">{{ trans('content/landing.intro_heading') }}</h2><br>
-        <p class="subtitle">{{ trans('content/landing.intro_paragraph') }}</p>
+        <h2 class="h2 title">@lang('content/landing.intro_heading')</h2><br>
+        <p class="subtitle">@lang('content/landing.intro_paragraph')</p>
     </div>
     <div class="info-tiles">
         <div class="tile is-ancestor has-text-centered">
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="headingFont title">49k</p>
-                    <p class="subtitle">{{ trans('content/landing.tiles_subscribers') }}</p>
+                    <p class="subtitle">@lang('content/landing.tiles_subscribers')</p>
                 </article>
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="headingFont title">59k</p>
-                    <p class="subtitle">{{ trans('content/landing.tiles_solar_panels') }}</p>
+                    <p class="subtitle">@lang('content/landing.tiles_solar_panels')</p>
                 </article>
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="headingFont title">34k</p>
-                    <p class="subtitle">{{ trans('content/landing.tiles_wind_turbines') }}</p>
+                    <p class="subtitle">@lang('content/landing.tiles_wind_turbines')</p>
                 </article>
             </div>
             <div class="tile is-parent">
                 <article class="tile is-child box">
                     <p class="headingFont title">19k</p>
-                    <p class="subtitle">{{ trans('content/landing.tiles_energy_produced') }}</p>
+                    <p class="subtitle">@lang('content/landing.tiles_energy_produced')</p>
                 </article>
             </div>
         </div>
@@ -144,9 +144,9 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4 class="h4">{{ trans('content/landing.card_solar_panels_heading') }}</h4>
-                        <p>{{ trans('content/landing.card_solar_panels_article') }}</p>
-                        <p><a href="#">{{ trans('content/landing.learn_more_anchor') }}</a></p>
+                        <h4 class="h4">@lang('content/landing.card_solar_panels_heading')</h4>
+                        <p>@lang('content/landing.card_solar_panels_article')</p>
+                        <p><a href="#">@lang('content/landing.learn_more_anchor')</a></p>
                     </div>
                 </div>
             </div>
@@ -158,9 +158,9 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4 class="h4">{{ trans('content/landing.card_wind_turbines_heading') }}</h4>
-                        <p>{{ trans('content/landing.card_wind_turbines_article') }}</p>
-                        <p><a href="#">{{ trans('content/landing.learn_more_anchor') }}</a></p>
+                        <h4 class="h4">@lang('content/landing.card_wind_turbines_heading')</h4>
+                        <p>@lang('content/landing.card_wind_turbines_article')</p>
+                        <p><a href="#">@lang('content/landing.learn_more_anchor')</a></p>
                     </div>
                 </div>
             </div>
@@ -172,9 +172,9 @@
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <h4 class="h4">{{ trans('content/landing.card_control_heading') }}</h4>
-                        <p>{{ trans('content/landing.card_control_article') }}</p>
-                        <p><a href="#">{{ trans('content/landing.learn_more_anchor') }}</a></p>
+                        <h4 class="h4">@lang('content/landing.card_control_heading')</h4>
+                        <p>@lang('content/landing.card_control_article')</p>
+                        <p><a href="#">@lang('content/landing.learn_more_anchor')</a></p>
                     </div>
                 </div>
             </div>
@@ -185,27 +185,27 @@
     <div class="container">
         <div class="columns">
             <div class="column is-3 is-offset-2">
-                <h2 class="h2 colour-white">{{ trans('content/landing.footer_about_heading') }}</h2>
+                <h2 class="h2 colour-white">@lang('content/landing.footer_about_heading')</h2>
                 <ul>
-                    <li><a href="#">{{ trans('content/landing.footer_about_anchor_company') }}</a></li>
-                    <li><a href="#">{{ trans('content/landing.footer_about_anchor_partners') }}</a></li>
-                    <li><a href="#">{{ trans('content/landing.footer_about_anchor_contact') }}</a></li>
+                    <li><a href="#">@lang('content/landing.footer_about_anchor_company')</a></li>
+                    <li><a href="#">@lang('content/landing.footer_about_anchor_partners')</a></li>
+                    <li><a href="#">@lang('content/landing.footer_about_anchor_contact')</a></li>
                 </ul>
             </div>
             <div class="column is-3">
-                <h2 class="h2 colour-white">{{ trans('content/landing.footer_law_heading') }}</h2>
+                <h2 class="h2 colour-white">@lang('content/landing.footer_law_heading')</h2>
                 <ul>
-                    <li><a href="#">{{ trans('content/landing.footer_law_anchor_law') }}</a></li>
-                    <li><a href="#">{{ trans('content/landing.footer_law_anchor_equipment') }}</a></li>
-                    <li><a href="#">{{ trans('content/landing.footer_about_anchor_terms') }}</a></li>
+                    <li><a href="#">@lang('content/landing.footer_law_anchor_law')</a></li>
+                    <li><a href="#">@lang('content/landing.footer_law_anchor_equipment')</a></li>
+                    <li><a href="#">@lang('content/landing.footer_about_anchor_terms')</a></li>
                 </ul>
             </div>
             <div class="column is-4">
-                <h2 class="h2 colour-white">{{ trans('content/landing.footer_info_heading') }}</h2>
+                <h2 class="h2 colour-white">@lang('content/landing.footer_info_heading')</h2>
                 <ul>
-                    <li><a href="#">{{ trans('content/landing.footer_info_anchor_contribution') }}</a></li>
-                    <li><a href="#">{{ trans('content/landing.footer_info_anchor_international') }}</a></li>
-                    <li><a href="#">{{ trans('content/landing.footer_info_anchor_products') }}</a></li>
+                    <li><a href="#">@lang('content/landing.footer_info_anchor_contribution')</a></li>
+                    <li><a href="#">@lang('content/landing.footer_info_anchor_international')</a></li>
+                    <li><a href="#">@lang('content/landing.footer_info_anchor_products')</a></li>
                 </ul>
             </div>
         </div>

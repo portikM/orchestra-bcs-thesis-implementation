@@ -14,8 +14,8 @@
         <div class="column is-9">
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <ul>
-                    <li><a href="{{ url('/') }}">Orchestra</a></li>
-                    <li class="is-active"><a href="{{ url('/dashboard') }}" aria-current="page">Dashboard</a></li>
+                    <li><a href="{{ url('/dashboard') }}">Orchestra</a></li>
+                    <li class="is-active"><a aria-current="page">Dashboard</a></li>
                 </ul>
             </nav>
             <section class="hero is-info welcome is-small">
@@ -31,25 +31,25 @@
                     <div class="tile is-parent">
                         <article class="tile is-child box">
                             <p class="headingFont title">49k</p>
-                            <p class="subtitle">{{ trans('content/landing.tiles_subscribers') }}</p>
+                            <p class="subtitle">@lang('content/landing.tiles_subscribers')</p>
                         </article>
                     </div>
                     <div class="tile is-parent">
                         <article class="tile is-child box">
                             <p class="headingFont title">59k</p>
-                            <p class="subtitle">{{ trans('content/landing.tiles_solar_panels') }}</p>
+                            <p class="subtitle">@lang('content/landing.tiles_solar_panels')</p>
                         </article>
                     </div>
                     <div class="tile is-parent">
                         <article class="tile is-child box">
                             <p class="headingFont title">34k</p>
-                            <p class="subtitle">{{ trans('content/landing.tiles_wind_turbines') }}</p>
+                            <p class="subtitle">@lang('content/landing.tiles_wind_turbines')</p>
                         </article>
                     </div>
                     <div class="tile is-parent">
                         <article class="tile is-child box">
                             <p class="headingFont title">19k</p>
-                            <p class="subtitle">{{ trans('content/landing.tiles_energy_produced') }}</p>
+                            <p class="subtitle">@lang('content/landing.tiles_energy_produced')</p>
                         </article>
                     </div>
                 </div>
