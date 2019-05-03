@@ -45,49 +45,49 @@
                                 <table class="table is-fullwidth is-striped">
                                     <tbody>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                         <tr>
-                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td width="5%"></td>
                                             <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">Manage</a></td>
+                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
