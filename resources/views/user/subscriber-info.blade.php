@@ -23,8 +23,8 @@
                     @else
                     <li><a href="{{ url('/dashboard') }}">Orchestra</a></li>
                     @endauth
-                    <li><a>Your Info</a></li>
-                    <li class="is-active"><a aria-current="page">View Your Info</a></li>
+                    <li><a>@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info')</a></li>
+                    <li class="is-active"><a aria-current="page">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info_view')</a></li>
                 </ul>
             </nav>
             <div class="columns">
@@ -34,7 +34,7 @@
 
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">View Your Info</p>
+                            <p class="card-header-title">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info_view')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -46,13 +46,13 @@
                                 <div class="columns">
                                     <div class="column is-6">
                                         <div class="field">
-                                            <p>Your phone number:</p>
+                                            <p>@lang('content/user/subscriber-info.phone_number')</p>
                                             <p>2262247547</p>
                                         </div>
                                     </div>
                                     <div class="column is-6">
                                         <div class="field">
-                                            <p>You are using this account:</p>
+                                            <p>@lang('content/user/subscriber-info.subscriber_type')</p>
                                             <p>for private purposes.</p>
                                         </div>
                                     </div>
@@ -60,22 +60,22 @@
                                 <div class="columns">
                                     <div class="column is-12">
                                         <div class="field">
-                                            <p>Your address:</p>
+                                            <p>@lang('content/user/subscriber-info.address')</p>
                                             <p>122 St George St.</p>
                                         </div>
                                         <div class="field">
-                                            <p>Your city:</p>
+                                            <p>@lang('content/user/subscriber-info.city')</p>
                                             <p>London, ON</p>
                                         </div>
                                         <div class="field">
-                                            <p>Your postal code:</p>
+                                            <p>@lang('content/user/subscriber-info.postal_code')</p>
                                             <p>N6A2A2</p>
                                         </div>
-                                        <a href="/subscriber-edit/{{Auth::user()->id}}" class="button is-primary colour-white btn-primary">
+                                        <a href="/subscriber-edit/{{$currentUser->id}}" class="button is-primary colour-white btn-primary">
                                             <span class="icon">
                                                 <i class="fas fa-edit"></i>
                                             </span>
-                                            <span>Edit</span>
+                                            <span>@lang('buttons.edit')</span>
                                         </a>
                                     </div>
                                 </div>

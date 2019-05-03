@@ -23,7 +23,7 @@
                     @else
                     <li><a href="{{ url('/dashboard') }}">Orchestra</a></li>
                     @endauth
-                    <li class="is-active"><a aria-current="page">Your System</a></li>
+                    <li class="is-active"><a aria-current="page">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</a></li>
                 </ul>
             </nav>
             <div class="columns">
@@ -33,7 +33,7 @@
 
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Your system</p>
+                            <p class="card-header-title">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>

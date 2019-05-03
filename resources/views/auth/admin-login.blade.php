@@ -22,7 +22,7 @@
                         @endif
                         <div class="field">
                             <div class="control">
-                                <input id="email" type="email" class="input is-large form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="@lang('content/login.email_placeholder')" autofocus>
+                                <input id="email" type="email" class="input is-large form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="@lang('auth.email_placeholder')" autofocus>
                             </div>
                         </div>
                         @if ($errors->has('password'))
@@ -32,14 +32,14 @@
                         @endif
                         <div class="field">
                             <div class="control">
-                                <input id="password" type="password" class="input is-large form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="@lang('content/login.password_placeholder')" autocomplete="current-password">
+                                <input id="password" type="password" class="input is-large form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="@lang('auth.password_placeholder')" autocomplete="current-password">
                             </div>
                         </div>
                         <div class="field">
                             <label class="checkbox">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> @lang('content/login.remember')</label>
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> @lang('auth.remember')</label>
                         </div>
-                        <button class="button is-block is-contrast is-large is-fullwidth colour-white btn-contrast">@lang('content/login.button')</button>
+                        <button class="button is-block is-contrast is-large is-fullwidth colour-white btn-contrast">@lang('auth.login_button')</button>
                     </form>
                 </div>
             </div>

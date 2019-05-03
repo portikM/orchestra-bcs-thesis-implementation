@@ -40,7 +40,7 @@
                                         <span class="icon">
                                             <i class="fas fa-sign-out-alt"></i>
                                         </span>
-                                        <span>@lang('content/landing.nav_logout')</span>
+                                        <span>@lang('auth.nav_logout')</span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -54,7 +54,7 @@
                                         <span class="icon">
                                             <i class="fas fa-home"></i>
                                         </span>
-                                        <span>@lang('content/landing.nav_dashboard')</span>
+                                        <span>@lang('auth.nav_dashboard')</span>
                                     </a>
                                 </span>
                                 <span class="navbar-item">
@@ -62,7 +62,7 @@
                                         <span class="icon">
                                             <i class="fas fa-sign-out-alt"></i>
                                         </span>
-                                        <span>@lang('content/landing.nav_logout')</span>
+                                        <span>@lang('auth.nav_logout')</span>
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -72,7 +72,7 @@
                                 @if (Route::has('register'))
                                     <span class="navbar-item">
                                         <a class="button btn-contrast is-contrast colour-white" href="{{ route('register') }}">
-                                            <span>@lang('content/landing.nav_register')</span>
+                                            <span>@lang('auth.nav_register')</span>
                                         </a>
                                     </span>
                                 @endif
@@ -81,7 +81,7 @@
                                         <span class="icon">
                                             <i class="fas fa-sign-in-alt"></i>
                                         </span>
-                                        <span>@lang('content/landing.nav_login')</span>
+                                        <span>@lang('auth.nav_login')</span>
                                     </a>
                                 </span>
                             @endauth

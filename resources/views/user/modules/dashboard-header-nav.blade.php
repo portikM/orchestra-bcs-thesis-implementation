@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             @auth('admin')
-            <a class="navbar-item brand-text headingFont" href="{{ url('/dashboard') }}">@lang('content/landing.nav_dashboard')</a>
+            <a class="navbar-item brand-text headingFont" href="{{ url('/dashboard') }}">@lang('auth.nav_dashboard')</a>
             @else
             <a class="navbar-item brand-text headingFont" href="{{ url('/dashboard') }}">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
             @endauth
@@ -21,7 +21,7 @@
                         <span class="icon">
                             <i class="fas fa-sign-out-alt"></i>
                         </span>
-                        <span>@lang('content/landing.nav_logout')</span>
+                        <span>@lang('auth.nav_logout')</span>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

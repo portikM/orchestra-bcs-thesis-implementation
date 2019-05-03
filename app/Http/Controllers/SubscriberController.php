@@ -49,8 +49,12 @@ class SubscriberController extends Controller
     public function add($id)
     {
         if(!Auth::guard('admin')->check()) {
-            if(Auth::user()->id != $id) {
+            if(Auth::user()->id != $id || Auth::user()->subscriber) {
                 return redirect()->back();
+            } else {
+                if(User::find($id)->subscriber) {
+                    return redirect()->back();
+                }
             }
         }
 

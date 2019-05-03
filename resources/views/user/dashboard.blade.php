@@ -15,14 +15,14 @@
             <nav class="breadcrumb" aria-label="breadcrumbs">
                 <ul>
                     <li><a href="{{ url('/dashboard') }}">Orchestra</a></li>
-                    <li class="is-active"><a aria-current="page">Dashboard</a></li>
+                    <li class="is-active"><a aria-current="page">@lang('content/user/dashboard-aside-nav.cat_general_dashboard')</a></li>
                 </ul>
             </nav>
             <section class="hero is-info welcome is-small">
                 <div class="hero-body">
                     <div class="container">
-                        <h1 class="title h1">Hello, {{ Auth::user()->first_name }}.</h1>
-                        <h2 class="subtitle">We hope you are having a great day!</h2>
+                        <h1 class="title h1">@lang('content/user/dashboard.greeting') {{ Auth::user()->first_name }}.</h1>
+                        <h2 class="subtitle">@lang('content/user/dashboard.greeting_line')</h2>
                     </div>
                 </div>
             </section>
@@ -58,7 +58,7 @@
                 <div class="column is-5">
                     <div class="card system-card">
                         <header class="card-header">
-                            <p class="card-header-title">Your system</p>
+                            <p class="card-header-title">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -116,7 +116,7 @@
                                             <td><a class="button is-small is-primary" href="#">Manage</a></td>
                                         </tr>
                                         @else
-                                            <td>You are not a subscriber right now. To become a subscriber add your personal information so we could set up your system.</td>
+                                            <td>@lang('content/user/dashboard.system_empty')</td>
                                         @endif
                                     </tbody>
                                 </table>
@@ -124,9 +124,9 @@
                         </div>
                         <footer class="card-footer">
                             @if(Auth::user()->subscriber)
-                                <a href="/subscriber-system/{{Auth::user()->id}}" class="card-footer-item">View All</a>
+                                <a href="/subscriber-system/{{Auth::user()->id}}" class="card-footer-item">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</a>
                             @else
-                                <a href="/add-info/{{Auth::user()->id}}" class="card-footer-item">Add info</a>
+                                <a href="/add-info/{{Auth::user()->id}}" class="card-footer-item">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info_add')</a>
                             @endif
                         </footer>
                     </div>
@@ -134,7 +134,7 @@
                 <div id="weatherWidget" class="column is-7">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Weather</p>
+                            <p class="card-header-title">@lang('content/user/dashboard.weather_card')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="card-header-icon icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>

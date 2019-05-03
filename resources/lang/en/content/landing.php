@@ -3,10 +3,6 @@
 // Landing page content - ENGLISH
 
 return [
-    'nav_register' => 'Register',
-    'nav_login' => 'Login',
-    'nav_logout' => 'Logout',
-    'nav_dashboard' => 'Dashboard',
     'hero_tagline' => 'The new standard in power supply',
     'hero_paragraph' => 'Our systems for remote control over power supply from alternative sources of energy take industry to a new level. It is time to abandon energy dependence and take a step towards eco-friendly future.',
     'hero_cta' => 'Enterprise plan with commercial scheme now available!',
