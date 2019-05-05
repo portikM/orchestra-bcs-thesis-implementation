@@ -47,13 +47,13 @@
                                     <div class="column is-6">
                                         <div class="field">
                                             <p>@lang('content/user/subscriber-info.phone_number')</p>
-                                            <p>2262247547</p>
+                                            <p>{{ $subscriber->phone_number }}</p>
                                         </div>
                                     </div>
                                     <div class="column is-6">
                                         <div class="field">
                                             <p>@lang('content/user/subscriber-info.subscriber_type')</p>
-                                            <p>for private purposes.</p>
+                                            <p>{{ $subscriber->subscriber_type }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -61,15 +61,15 @@
                                     <div class="column is-12">
                                         <div class="field">
                                             <p>@lang('content/user/subscriber-info.address')</p>
-                                            <p>122 St George St.</p>
+                                            <p>{{ $subscriber->address }}</p>
                                         </div>
                                         <div class="field">
                                             <p>@lang('content/user/subscriber-info.city')</p>
-                                            <p>London, ON</p>
+                                            <p>{{ $subscriber->city }}</p>
                                         </div>
                                         <div class="field">
                                             <p>@lang('content/user/subscriber-info.postal_code')</p>
-                                            <p>N6A2A2</p>
+                                            <p>{{ $subscriber->postal_code }}</p>
                                         </div>
                                         <a href="/subscriber-edit/{{$currentUser->id}}" class="button is-primary colour-white btn-primary">
                                             <span class="icon">

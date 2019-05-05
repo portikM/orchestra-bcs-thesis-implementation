@@ -44,51 +44,20 @@
                             <div class="content">
                                 <table class="table is-fullwidth is-striped">
                                     <tbody>
+                                        @if ($systems->isEmpty())
+                                            <td>@lang('content/user/dashboard.system_empty')</td>
+                                        @endif
+                                        @foreach ($systems as $system)
                                         <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
+                                            <td width="5%"><a class="{{ $system->pivot->system_state === 1 ? 'system-power-on' : 'system-power-off' }}" href="#"><i class="fas fa-power-off"></i></a></td>
+                                            @if ($system->system_type === 1)
+                                            <td>@lang('content/user/dashboard.system_type_solar_panel') {{ $system->system_code }} {{ $system->system_capacity }}@lang('content/user/dashboard.system_capacity_units')</td>
+                                            @elseif ($system->system_type === 2)
+                                            <td>@lang('content/user/dashboard.system_type_wind_turbine') {{ $system->system_code }} {{ $system->system_capacity }}@lang('content/user/dashboard.system_capacity_units')</td>
+                                            @endif
                                             <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
                                         </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

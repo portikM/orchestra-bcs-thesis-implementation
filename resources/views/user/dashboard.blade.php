@@ -58,7 +58,7 @@
                 <div class="column is-5">
                     <div class="card system-card">
                         <header class="card-header">
-                            <p class="card-header-title">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</p>
+                            <p class="card-header-title">@lang('content/user/dashboard.system_card')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -70,53 +70,22 @@
                                 <table class="table is-fullwidth is-striped">
                                     <tbody>
                                         @if(Auth::user()->subscriber)
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="5%"></td>
-                                            <td>Lorum ipsum dolem aire</td>
-                                            <td><a class="button is-small is-primary" href="#">@lang('buttons.manage')</a></td>
-                                        </tr>
-                                        @else
+                                        @if ($systems->isEmpty())
                                             <td>@lang('content/user/dashboard.system_empty')</td>
+                                        @endif
+                                        @foreach ($systems as $system)
+                                        <tr>
+                                            <td width="5%"></td>
+                                            @if ($system->system_type === 1)
+                                            <td>@lang('content/user/dashboard.system_type_solar_panel') {{ $system->system_code }} {{ $system->system_capacity }}@lang('content/user/dashboard.system_capacity_units')</td>
+                                            @elseif ($system->system_type === 2)
+                                            <td>@lang('content/user/dashboard.system_type_wind_turbine') {{ $system->system_code }} {{ $system->system_capacity }}@lang('content/user/dashboard.system_capacity_units')</td>
+                                            @endif
+                                            <td><a class="{{ $system->pivot->system_state === 1 ? 'system-power-on' : 'system-power-off' }}" href="#"><i class="fas fa-power-off"></i></a></td>
+                                        </tr>
+                                        @endforeach
+                                        @else
+                                            <td>@lang('content/user/dashboard.system_not_subscriber')</td>
                                         @endif
                                     </tbody>
                                 </table>

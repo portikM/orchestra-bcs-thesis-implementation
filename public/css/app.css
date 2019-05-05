@@ -256,8 +256,8 @@ p.subtitle {
   padding-top: 1rem;
 }
 
-.invalid-feedback {
-  color: #f85167;
+.invalid-feedback strong {
+  color: #f85167 !important;
 }
 
 .is-invalid {
@@ -266,6 +266,14 @@ p.subtitle {
 
 .select:not(.is-multiple):not(.is-loading)::after {
   border-color: #624cc1;
+}
+
+.form-success {
+  background-color: rgba(0, 209, 178, 0.1) !important;
+}
+
+.submit-success {
+  margin-left: 10px;
 }
 
 #loginPage .form-container {
@@ -425,6 +433,22 @@ nav.navbar#dashboardNav .navbar-link {
 
 #weatherWidget .card-content .content iframe {
   width: 100% !important;
+}
+
+.system-power-on {
+  color: #00d1b2;
+}
+
+.system-power-on:hover {
+  color: #f85167;
+}
+
+.system-power-off {
+  color: #f85167;
+}
+
+.system-power-off:hover {
+  color: #00d1b2;
 }
 
 html,

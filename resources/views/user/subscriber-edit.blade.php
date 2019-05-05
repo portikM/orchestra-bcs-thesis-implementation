@@ -33,9 +33,16 @@
                     <!-- section specific content start  -->
                     
                     @auth
+                    @if(Auth::user()->subscriber)
                     <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</p>
+                        <header class="card-header{{ Session::has('user_submit_success') ? ' form-success' : '' }}">
+                            <p class="card-header-title">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
+                                @if (Session::has('user_submit_success'))
+                                    <span class="submit-success">
+                                        <i class="far fa-check-circle colour-contrast"></i>
+                                    </span>
+                                @endif
+                            </p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -44,37 +51,62 @@
                         </header>
                         <div class="content">
                             <div class="card-content">
-                                <form method="POST" action="">
+                                <form method="POST" action="{{ route('user-edit-submit', $currentUser->id) }}">
+                                    @csrf
                                     <div class="columns">
                                         <div class="column is-12">
+                                        @if ($errors->has('email'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
                                         <div class="field">
                                                 <div class="control">
-                                                    <input id="email" type="email" class="input is-tablet" name="email" value="{{ $currentUser->email }}" autocomplete="email" placeholder="@lang('auth.email_placeholder')">
+                                                    <input id="email" type="email" class="input is-tablet form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $currentUser->email }}" autocomplete="email" placeholder="@lang('auth.new_email_placeholder')">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="columns">
                                         <div class="column is-6">
+                                            @if ($errors->has('new_password'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('new_password') }}</strong>
+                                                </span>
+                                            @endif
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="password" type="password" class="input is-tablet" name="password" autocomplete="new-password" placeholder="@lang('auth.new_password_placeholder')">
+                                                    <input id="new_password" type="password" class="input is-tablet form-control{{ $errors->has('new_password') ? ' is-invalid' : '' }}" name="new_password" autocomplete="new-password" placeholder="@lang('auth.new_password_placeholder')">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="column is-6">
+                                            @if ($errors->has('password_confirmation'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                                </span>
+                                            @endif
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="password-confirm" type="password" class="input is-tablet" name="password_confirmation" autocomplete="new-password" placeholder="@lang('auth.confirm_password_placeholder')">
+                                                    <input id="new_password_confirmation" type="password" class="input is-tablet form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="new_password_confirmation" autocomplete="new-password" placeholder="@lang('auth.confirm_password_placeholder')">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="columns">
                                         <div class="column is-12">
+                                            @if ($errors->has('old_password'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('old_password') }}</strong>
+                                                </span>
+                                            @elseif ($errors->has('wrong_password'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('wrong_password') }}</strong>
+                                                </span>
+                                            @endif
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="password" type="password" class="input is-tablet" name="password" placeholder="@lang('auth.old_password_placeholder')" autocomplete="current-password">
+                                                    <input id="old_password" type="password" class="input is-tablet form-control{{ $errors->has('old_password') ? ' is-invalid' : ($errors->has('wrong_password') ? ' is-invalid' : '') }}" name="old_password" placeholder="@lang('auth.old_password_placeholder')" required autocomplete="current-password">
                                                 </div>
                                             </div>
                                             <button class="button is-block is-primary is-tablet colour-white btn-primary">@lang('buttons.save')</button>
@@ -84,11 +116,18 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     @endauth
 
                     <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info_edit')</p>
+                        <header class="card-header{{ Session::has('subscriber_submit_success') ? ' form-success' : '' }}">
+                            <p class="card-header-title">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info_edit')
+                                @if (Session::has('subscriber_submit_success'))
+                                    <span class="submit-success">
+                                        <i class="far fa-check-circle colour-contrast"></i>
+                                    </span>
+                                @endif
+                            </p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -97,12 +136,24 @@
                         </header>
                         <div class="content">
                             <div class="card-content">
-                                <form method="POST" action="">
+                                @auth
+                                @if(Auth::user()->subscriber)
+                                <form method="POST" action="{{ route('subscriber-edit-submit', $currentUser->id) }}">
+                                @else
+                                <form method="POST" action="{{ route('add-info-submit', $currentUser->id) }}">
+                                @endif
+                                @else
+                                <form method="POST" action="{{ route('subscriber-edit-submit', $currentUser->id) }}">
+                                @endauth
+                                    @csrf
+                                    @auth
+                                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                    @endauth
                                     <div class="columns">
                                         <div class="column is-6">
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="phone_number" type="text" class="input is-tablet" name="phone_number" required autocomplete="phone_number" value="{{ $checkvariable ?? '' }}" placeholder="@lang('content/user/subscriber-edit.prone_number_placeholder')" autofocus>
+                                                    <input id="phone_number" type="text" class="input is-tablet" name="phone_number" required autocomplete="phone_number" value="{{ $subscriber->phone_number ?? '' }}" placeholder="@lang('content/user/subscriber-edit.prone_number_placeholder')" autofocus>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,9 +161,9 @@
                                             <div class="field">
                                                 <div class="control">
                                                     <div class="select">
-                                                        <select name="subscriber_type">
-                                                            <option>@lang('content/user/subscriber-edit.subscriber_type_option_business')</option>
+                                                        <select name="subscriber_type" required>
                                                             <option>@lang('content/user/subscriber-edit.subscriber_type_option_private')</option>
+                                                            <option>@lang('content/user/subscriber-edit.subscriber_type_option_business')</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -123,17 +174,17 @@
                                         <div class="column is-12">
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="address" type="text" class="input is-tablet" required autocomplete="address" value="{{ $checkvariable ?? '' }}" placeholder="@lang('content/user/subscriber-edit.address_placeholder')">
+                                                    <input id="address" type="text" class="input is-tablet" name="address" required autocomplete="address" value="{{ $subscriber->address ?? '' }}" placeholder="@lang('content/user/subscriber-edit.address_placeholder')">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="city" type="text" class="input is-tablet" name="city" required autocomplete="city" value="{{ $checkvariable ?? '' }}" placeholder="@lang('content/user/subscriber-edit.city_placeholder')">
+                                                    <input id="city" type="text" class="input is-tablet" name="city" required autocomplete="city" value="{{ $subscriber->city ?? '' }}" placeholder="@lang('content/user/subscriber-edit.city_placeholder')">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="control">
-                                                    <input id="postal_code" type="text" class="input is-tablet" name="postal_code" required autocomplete="postal_code" value="{{ $checkvariable ?? '' }}" placeholder="@lang('content/user/subscriber-edit.postal_code_placeholder')">
+                                                    <input id="postal_code" type="text" class="input is-tablet" name="postal_code" required autocomplete="postal_code" value="{{ $subscriber->postal_code ?? '' }}" placeholder="@lang('content/user/subscriber-edit.postal_code_placeholder')">
                                                 </div>
                                             </div>
                                             @auth

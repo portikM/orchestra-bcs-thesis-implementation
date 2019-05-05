@@ -1,0 +1,16 @@
+
+.system-power-on {
+    color: $contrast;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.system-power-off {
+    color: $red;
+
+    &:hover {
+        color: $contrast;
+    }
+}

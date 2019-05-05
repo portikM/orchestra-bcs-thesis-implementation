@@ -147,7 +147,8 @@ return [
     'attributes' => [
         'first_name' => "Ім'я",
         'last_name' => 'Прізвище',
-        'password' => 'Пароль'
+        'password' => 'Пароль',
+        'new_password' => 'Новий пароль'
     ],
 
 ];

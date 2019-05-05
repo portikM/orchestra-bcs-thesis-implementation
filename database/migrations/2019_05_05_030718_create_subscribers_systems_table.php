@@ -17,8 +17,9 @@ class CreateSubscribersSystemsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('subscriber_id');
             $table->foreign('subscriber_id')->references('id')->on('subscribers');
-            $table->integer('equipment_id');
-            $table->foreign('equipment_id')->references('id')->on('equipment');
+            $table->integer('system_id');
+            $table->foreign('system_id')->references('id')->on('systems');
+            $table->integer('system_state'); // 1 is for on, 2 is for off 
             $table->timestamps();
         });
     }
