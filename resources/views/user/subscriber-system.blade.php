@@ -10,7 +10,7 @@
     <div class="columns">
         <div class="column is-3 ">
             @auth('admin')
-            <!-- include('admin.modules.dashboard-aside-nav') -->
+                @include('admin.modules.admin-aside-nav')
             @else
                 @include('user.modules.dashboard-aside-nav')
             @endauth

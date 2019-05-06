@@ -19,7 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+
+// USER ROUTES
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 Route::middleware('user-admin')->group(function () {
     Route::get('/subscriber-system/{id}', 'SubscriberController@system')->name('subscriber-system');
     Route::get('/subscriber-edit/{id}', 'SubscriberController@edit')->name('subscriber-edit');
@@ -31,9 +36,16 @@ Route::middleware('user-admin')->group(function () {
 });
 
 
+
+// ADMIN ROUTES
+
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/', 'AdminController@index')->name('admin');
 });
+
+Route::get('/subscribers-list', 'AdminController@list')->name('subscribers-list');
+Route::get('/register-system', 'AdminController@register')->name('register-system');
+Route::post('/register-system-submit', 'AdminController@registerSubmit')->name('register-system-submit');
 

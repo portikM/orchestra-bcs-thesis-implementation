@@ -19,7 +19,7 @@ return [
     'nav_register' => 'Register',
     'nav_login' => 'Login',
     'nav_logout' => 'Logout',
-    'nav_dashboard' => 'Dashboard',
+    'nav_dashboard' => 'Dashboard', // admin dashboard
     'email_placeholder' => 'Your Email *',
     'new_email_placeholder' => 'Your New Email',
     'password_placeholder' => 'Your Password *',

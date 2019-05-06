@@ -9,3 +9,12 @@ body {
     font-family: "Roboto", serif;
     color: $black;
 }
+
+.subscriber-access-icon {
+    color: $primary;
+    margin: 0 5px;
+
+    &:hover {
+        color: $black;
+    }
+}

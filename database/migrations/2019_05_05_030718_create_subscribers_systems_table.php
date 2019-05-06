@@ -19,7 +19,7 @@ class CreateSubscribersSystemsTable extends Migration
             $table->foreign('subscriber_id')->references('id')->on('subscribers');
             $table->integer('system_id');
             $table->foreign('system_id')->references('id')->on('systems');
-            $table->integer('system_state'); // 1 is for on, 2 is for off 
+            $table->integer('system_state')->default(0); // 1 is for on, 0 is for off 
             $table->timestamps();
         });
     }

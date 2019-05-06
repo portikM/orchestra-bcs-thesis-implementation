@@ -17,11 +17,6 @@ class Subscriber extends Model
         'user_id',
     ];
 
-    public function subscriber()
-    {
-        return $this->get();
-    }
-
     public function systems()
     {
         return $this->belongsToMany('App\System', 'subscribers_systems')->withPivot('system_state');

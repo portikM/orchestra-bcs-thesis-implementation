@@ -458,3 +458,12 @@ body {
   color: #06040c;
 }
 
+.subscriber-access-icon {
+  color: #624cc1;
+  margin: 0 5px;
+}
+
+.subscriber-access-icon:hover {
+  color: #06040c;
+}
+

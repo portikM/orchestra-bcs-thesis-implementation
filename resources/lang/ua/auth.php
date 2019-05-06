@@ -19,7 +19,7 @@ return [
     'nav_register' => 'Зареєструватися',
     'nav_login' => 'Увійти',
     'nav_logout' => 'Вийти',
-    'nav_dashboard' => 'Адмінпанель',
+    'nav_dashboard' => 'Адмінпанель', // admin dashboard
     'email_placeholder' => 'Ваш Email *',
     'new_email_placeholder' => 'Ваш новий Email',
     'password_placeholder' => 'Ваш пароль *',
