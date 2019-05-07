@@ -55,7 +55,7 @@ class AdminController extends Controller
 
     public function registerSubmit(Request $request)
     {   
-        if(!$request->subscriber_id) {
+        if(!$request->subscriber_id || !$request->system_id) {
             return redirect()->back();
         }
 

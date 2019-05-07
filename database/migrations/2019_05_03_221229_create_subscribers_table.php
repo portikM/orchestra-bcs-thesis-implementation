@@ -14,7 +14,7 @@ class CreateSubscribersTable extends Migration
     public function up()
     {
         Schema::create('subscribers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigInteger('id');
             $table->string('phone_number');
             $table->string('subscriber_type');
             $table->string('address');

@@ -148,6 +148,9 @@
                                     @csrf
                                     @auth
                                     <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                    @if(!Auth::user()->subscriber)
+                                    <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+                                    @endif
                                     @endauth
                                     <div class="columns">
                                         <div class="column is-6">

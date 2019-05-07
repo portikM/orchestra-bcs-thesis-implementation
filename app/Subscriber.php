@@ -9,6 +9,7 @@ class Subscriber extends Model
     protected $table = 'subscribers';
 
     protected $fillable = [
+        'id',
         'phone_number',
         'subscriber_type',
         'address',

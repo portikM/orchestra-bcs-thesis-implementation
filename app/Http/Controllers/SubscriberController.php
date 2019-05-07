@@ -30,7 +30,7 @@ class SubscriberController extends Controller
 
         $subscriber = Subscriber::where('user_id', $id)->first();
 
-        $systems = Subscriber::find($subscriber->id)->systems;
+        $systems = Subscriber::find($subscriber->user_id)->systems;
 
         return View::make('user.subscriber-system')->with(['currentUser' => $currentUser])->with(['systems' => $systems]);
     }
