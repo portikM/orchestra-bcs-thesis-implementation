@@ -86,7 +86,7 @@ class SubscriberController extends Controller
 
     public function addSubmit(Request $request, $id)
     {
-        if(Auth::user()->id != $id || Auth::user()->id != $request->user_id) {
+        if(Auth::user()->id != $id || Auth::user()->id != $request->id || Auth::user()->id != $request->user_id) {
             return redirect()->back();
         }
 
