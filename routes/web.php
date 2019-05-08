@@ -11,6 +11,42 @@
 |
 */
 
+Route::get('lang/{locale}', 'LangController@lang');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
+
+Auth::routes();
+
+
+
+// USER ROUTES
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::middleware('user-admin')->group(function () {
+    Route::get('/subscriber-system/{id}', 'SubscriberController@system')->name('subscriber-system');
+    Route::get('/subscriber-statistics/{id}', 'SubscriberController@statistics')->name('subscriber-statistics');
+    Route::get('/subscriber-edit/{id}', 'SubscriberController@edit')->name('subscriber-edit');
+    Route::get('/add-info/{id}', 'SubscriberController@add')->name('subscriber-edit');
+    Route::post('/subscriber-edit-submit/{id}', 'SubscriberController@editSubmit')->name('subscriber-edit-submit');
+    Route::post('/user-edit-submit/{id}', 'Auth\UserController@editSubmit')->name('user-edit-submit');
+    Route::post('/add-info-submit/{id}', 'SubscriberController@addSubmit')->name('add-info-submit');
+    Route::get('/subscriber-info/{id}', 'SubscriberController@info')->name('subscriber-info');
+});
+
+
+
+// ADMIN ROUTES
+
+Route::prefix('admin')->group(function() {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin');
+});
+
+Route::get('/subscribers-list', 'AdminController@list')->name('subscribers-list');
+Route::get('/register-system', 'AdminController@register')->name('register-system');
+Route::post('/register-system-submit', 'AdminController@registerSubmit')->name('register-system-submit');
+

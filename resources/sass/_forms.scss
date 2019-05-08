@@ -1,0 +1,50 @@
+
+@import "colours";
+@import "typography";
+@import "breakpoints";
+
+.hero.is-success {
+    background: $darkerWhite;
+}
+.avatar {
+    margin-top: -70px;
+    padding-bottom: 20px;
+}
+.avatar img {
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1),
+        0 0 0 1px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+input {
+    font-weight: 300;
+}
+p {
+    font-weight: 700;
+}
+p.subtitle {
+    padding-top: 1rem;
+}
+.invalid-feedback {
+    strong {
+        color: $red !important;
+    }
+}
+.is-invalid {
+    border-color: $red;
+}
+.select{
+    &:not(.is-multiple):not(.is-loading)::after {
+        border-color: $primary;
+    }
+}
+
+.form-success {
+    background-color: rgba($contrast, 0.1) !important;
+}
+
+.submit-success {
+    margin-left: 10px;
+}

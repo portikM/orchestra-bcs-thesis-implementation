@@ -1,14 +1,27 @@
+@import 'landing';
+@import 'login';
+@import 'dashboard';
+@import 'buttons';
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+html,
+body {
+    font-family: "Roboto", serif;
+    color: $black;
+}
 
-// Variables
-@import 'variables';
+.subscriber-access-icon {
+    color: $primary;
+    margin: 0 5px;
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+    &:hover {
+        color: $black;
+    }
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.columns {
+    height: max-content;
+}
+
+.statistics {
+    padding: 50px;
 }

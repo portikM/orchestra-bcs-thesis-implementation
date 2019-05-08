@@ -14,6 +14,26 @@ return [
     */
 
     'failed' => 'These credentials do not match our records.',
+    'wrong_password' => 'Wrong password!', // for subscriber-edit blade
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'nav_register' => 'Register',
+    'nav_login' => 'Login',
+    'nav_logout' => 'Logout',
+    'nav_dashboard' => 'Dashboard', // admin dashboard
+    'email_placeholder' => 'Your Email *',
+    'new_email_placeholder' => 'Your New Email',
+    'password_placeholder' => 'Your Password *',
+    'new_password_placeholder' => 'Your New Password',
+    'old_password_placeholder' => 'Your Old Password *',
+    'first_name_placeholder' => 'Fist Name *',
+    'last_name_placeholder' => 'Last Name *',
+    'confirm_password_placeholder' => 'Confirm Password *',
+    'register_button' => 'Register',
+    'remember' => 'Remember me',
+    'login_button' => 'Login',
+    'login_anchor' => 'Already have an account?',
+    'register_anchor' => 'Register',
+    'forgot_password_anchor' => 'Forgot Password',
+    'help_anchor' => 'Need Help?'
 
 ];
