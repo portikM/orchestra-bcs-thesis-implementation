@@ -3,7 +3,7 @@
 @section('title', 'Orchestra')
 
 @section('content')
-<section class="hero is-medium is-bold">
+<section class="hero landing is-medium is-bold">
     <div class="hero-head">
         <nav class="navbar">
             <div class="container">

@@ -41,10 +41,9 @@
                                 </span>
                             </span>
                         </header>
-                        <div class="card-table">
-                            <div class="content">
-                            <div class="bar-graph">
-                            </div>                                
+                        <div class="content">
+                            <div class="statistics">
+                                <object data="../images/statistics/systems.svg" type="image/svg+xml"></object>                           
                             </div>
                         </div>
                     </div>
@@ -64,6 +63,9 @@
                         </header>
                         <div class="card-table">
                             <div class="content">
+                                <div class="statistics">
+                                    <object data="../images/statistics/production.svg" type="image/svg+xml"></object>                           
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -80,6 +82,9 @@
                         </header>
                         <div class="card-table">
                             <div class="content">
+                                <div class="statistics">
+                                    <object data="../images/statistics/consumption.svg" type="image/svg+xml"></object>                           
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,6 +104,9 @@
                         </header>
                         <div class="card-table">
                             <div class="content">
+                                <div class="statistics">
+                                    <object data="../images/statistics/month.svg" type="image/svg+xml"></object>                           
+                                </div>
                             </div>
                         </div>
                     </div>

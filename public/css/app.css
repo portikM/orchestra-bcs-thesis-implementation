@@ -47,6 +47,12 @@
   font-weight: 700;
 }
 
+body {
+  min-height: 100vh;
+  background-image: url(/images/bg.png?a3e462eea67ed33e8070b657f24a43fe);
+  background-repeat: repeat;
+}
+
 .navbar-logo {
   padding: 15px 0;
 }
@@ -454,7 +460,6 @@ nav.navbar#dashboardNav .navbar-link {
 html,
 body {
   font-family: "Roboto", serif;
-  background-image: url(/images/bg.png?a3e462eea67ed33e8070b657f24a43fe);
   color: #06040c;
 }
 
@@ -465,5 +470,15 @@ body {
 
 .subscriber-access-icon:hover {
   color: #06040c;
+}
+
+.columns {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.statistics {
+  padding: 50px;
 }
 

@@ -2,12 +2,10 @@
 @import 'login';
 @import 'dashboard';
 @import 'buttons';
-//@import 'statistics';
 
 html,
 body {
     font-family: "Roboto", serif;
-    background-image: url("../images/bg.png");
     color: $black;
 }
 
@@ -18,4 +16,12 @@ body {
     &:hover {
         color: $black;
     }
+}
+
+.columns {
+    height: max-content;
+}
+
+.statistics {
+    padding: 50px;
 }

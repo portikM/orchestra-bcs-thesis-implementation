@@ -3,6 +3,12 @@
 @import "typography";
 @import "breakpoints";
 
+body {
+    min-height: 100vh;
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+}
+
 .navbar-logo {
     padding: 15px 0;
 }
