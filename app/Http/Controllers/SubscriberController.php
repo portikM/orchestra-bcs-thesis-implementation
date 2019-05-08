@@ -35,6 +35,23 @@ class SubscriberController extends Controller
         return View::make('user.subscriber-system')->with(['currentUser' => $currentUser])->with(['systems' => $systems]);
     }
 
+    public function statistics($id)
+    {
+        if(!Auth::guard('admin')->check()) {
+            if(Auth::user()->id != $id || !Auth::user()->subscriber) {
+                return redirect()->back();
+            }
+        } else {
+            if(!User::find($id)->subscriber) {
+                return redirect()->back();
+            }
+        }
+
+        $currentUser = User::find($id);
+
+        return View::make('user.subscriber-statistics')->with(['currentUser' => $currentUser]);
+    }
+
     public function edit($id)
     {
         if(!Auth::guard('admin')->check()) {

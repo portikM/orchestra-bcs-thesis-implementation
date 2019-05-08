@@ -52,7 +52,7 @@
 }
 
 .hero {
-  background-image: url(/images/hero.jpg?632f94d0f4295743e8cc338741ccd441);
+  background-image: url(/images/hero.jpg?c5a89b5eb01611737e1ecc5ffb532ac9);
   background-position: center;
   background-size: cover;
 }
@@ -453,8 +453,8 @@ nav.navbar#dashboardNav .navbar-link {
 
 html,
 body {
-  background: #eff3f4;
   font-family: "Roboto", serif;
+  background-image: url(/images/bg.png?a3e462eea67ed33e8070b657f24a43fe);
   color: #06040c;
 }
 

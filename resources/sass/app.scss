@@ -2,11 +2,12 @@
 @import 'login';
 @import 'dashboard';
 @import 'buttons';
+//@import 'statistics';
 
 html,
 body {
-    background: $darkerWhite;
     font-family: "Roboto", serif;
+    background-image: url("../images/bg.png");
     color: $black;
 }
 

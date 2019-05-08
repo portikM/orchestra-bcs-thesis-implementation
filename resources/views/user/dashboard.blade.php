@@ -93,7 +93,7 @@
                         </div>
                         <footer class="card-footer">
                             @if(Auth::user()->subscriber)
-                                <a href="/subscriber-system/{{Auth::user()->id}}" class="card-footer-item">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</a>
+                                <a href="/subscriber-system/{{Auth::user()->id}}" class="card-footer-item">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_system_system')</a>
                             @else
                                 <a href="/add-info/{{Auth::user()->id}}" class="card-footer-item">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info_add')</a>
                             @endif

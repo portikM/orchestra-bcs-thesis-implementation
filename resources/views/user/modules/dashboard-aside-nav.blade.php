@@ -7,7 +7,13 @@
     <p class="menu-label">@lang('content/user/dashboard-aside-nav.cat_subscriber')</p>
     <ul class="menu-list">
         @if(Auth::user()->subscriber)
-            <li><a href="/subscriber-system/{{Auth::user()->id}}">@lang('content/user/dashboard-aside-nav.cat_subscriber_system')</a></li>
+        <li>
+            <a>@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_system')</a>
+            <ul>
+                <li><a href="/subscriber-system/{{Auth::user()->id}}">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_system_system')</a></li>
+                <li><a href="/subscriber-statistics/{{Auth::user()->id}}">@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_system_statistics')</a></li>
+            </ul>
+        </li>
         @endif
         <li>
             <a>@lang('content/user/dashboard-aside-nav.cat_subscriber_subcat_info')</a>

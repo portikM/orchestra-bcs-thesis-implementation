@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Your System')
+@section('title', 'All Subscribers')
 
 @section('content')
 
@@ -49,6 +49,9 @@
                                                 </a>
                                                 <a href="/subscriber-system/{{ $subscriber->id }}" class="subscriber-access-icon">
                                                     <i class="fas fa-solar-panel"></i>
+                                                </a>
+                                                <a href="/subscriber-statistics/{{ $subscriber->id }}" class="subscriber-access-icon">
+                                                    <i class="fas fa-chart-bar"></i>
                                                 </a>
                                             </td>
                                         </tr>

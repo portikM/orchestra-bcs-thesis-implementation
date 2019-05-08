@@ -27,6 +27,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::middleware('user-admin')->group(function () {
     Route::get('/subscriber-system/{id}', 'SubscriberController@system')->name('subscriber-system');
+    Route::get('/subscriber-statistics/{id}', 'SubscriberController@statistics')->name('subscriber-statistics');
     Route::get('/subscriber-edit/{id}', 'SubscriberController@edit')->name('subscriber-edit');
     Route::get('/add-info/{id}', 'SubscriberController@add')->name('subscriber-edit');
     Route::post('/subscriber-edit-submit/{id}', 'SubscriberController@editSubmit')->name('subscriber-edit-submit');
