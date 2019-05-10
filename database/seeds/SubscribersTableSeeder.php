@@ -18,6 +18,7 @@ class SubscribersTableSeeder extends Seeder
             'address' => '2 Rymskoho-Korsakova St.',
             'city' => 'Sumy',
             'postal_code' => '40000',
+            'country_id' => '1',
             'user_id' => '1'
         ]);
 
@@ -28,6 +29,7 @@ class SubscribersTableSeeder extends Seeder
             'address' => '134 Petropavlivska St.',
             'city' => 'Sumy',
             'postal_code' => '40042',
+            'country_id' => '36',
             'user_id' => '2'
         ]);
 
@@ -38,6 +40,7 @@ class SubscribersTableSeeder extends Seeder
             'address' => '420 Canada St.',
             'city' => 'Kyiv',
             'postal_code' => '50051',
+            'country_id' => '4',
             'user_id' => '3'
         ]);
 
@@ -48,6 +51,7 @@ class SubscribersTableSeeder extends Seeder
             'address' => 'Вул. Богдана Хмерьницького 19, кв.20',
             'city' => 'Хмельницьк',
             'postal_code' => '30031',
+            'country_id' => '34',
             'user_id' => '4'
         ]);
 
@@ -58,6 +62,7 @@ class SubscribersTableSeeder extends Seeder
             'address' => 'Вул. Івана Сірка 20, кв.19',
             'city' => 'Полтава',
             'postal_code' => '60061',
+            'country_id' => '34',
             'user_id' => '5'
         ]);
     }

@@ -15,6 +15,7 @@ class Subscriber extends Model
         'address',
         'city',
         'postal_code',
+        'country_id',
         'user_id',
     ];
 

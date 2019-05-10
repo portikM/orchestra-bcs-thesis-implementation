@@ -33,8 +33,67 @@
             <div class="columns">
                 <div class="column is-12">
                     <div class="card">
+                        <div class="content">
+                            <div class="columns">
+                                <div class="column is-6">
+                                    <table class="table is-fullwidth">
+                                        <tbody>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_country')</td>
+                                                @if ( Config::get('app.locale') == 'en')
+                                                <td>{{ $country->country_name_en }}</td>
+                                                @else
+                                                <td>{{ $country->country_name_ua }}</td>
+                                                @endif
+                                            </tr>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_efficiency')</td>
+                                                <td>86%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_angle')</td>
+                                                <td>{{ $angle }} &#176;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_wind')</td>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_wind_value')</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="column is-6">
+                                    <table class="table is-fullwidth">
+                                        <tbody>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_parameter')</td>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_value')</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_parameter')</td>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_value')</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_parameter')</td>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_value')</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_parameter')</td>
+                                                <td>@lang('content/user/subscriber-statistics.subscriber_dummy_value')</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-12">
+                    <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Today</p>
+                            <p class="card-header-title">@lang('content/user/subscriber-statistics.systems_infographics')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -54,7 +113,7 @@
                 <div class="column is-6">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Energy production</p>
+                            <p class="card-header-title">@lang('content/user/subscriber-statistics.production_infographics')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -73,7 +132,7 @@
                 <div class="column is-6">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">Energy consumption</p>
+                            <p class="card-header-title">@lang('content/user/subscriber-statistics.consumption_infographics')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -95,7 +154,7 @@
                 <div class="column is-12">
                     <div class="card">
                         <header class="card-header">
-                            <p class="card-header-title">This month</p>
+                            <p class="card-header-title">@lang('content/user/subscriber-statistics.monthly_infographics')</p>
                             <span class="card-header-icon" aria-label="more options">
                                 <span class="icon">
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>

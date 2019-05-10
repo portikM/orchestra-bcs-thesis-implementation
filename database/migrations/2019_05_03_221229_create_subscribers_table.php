@@ -20,6 +20,8 @@ class CreateSubscribersTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('postal_code');
+            $table->integer('country_id');
+            $table->foreign('country_id')->references('id')->on('countries');
             $table->integer('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

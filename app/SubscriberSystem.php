@@ -9,7 +9,6 @@ class SubscriberSystem extends Model
     protected $table = 'subscribers_systems';
 
     protected $fillable = [
-        
         'subscriber_id',
         'equipment_id'
     ];
