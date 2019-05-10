@@ -190,6 +190,23 @@
                                                     <input id="postal_code" type="text" class="input is-tablet" name="postal_code" required autocomplete="postal_code" value="{{ $subscriber->postal_code ?? '' }}" placeholder="@lang('content/user/subscriber-edit.postal_code_placeholder')">
                                                 </div>
                                             </div>
+                                            @if(!Auth::user()->subscriber)
+                                            <div class="field">
+                                                <div class="control">
+                                                    <div class="select">
+                                                        <select name="country_id" required>
+                                                            @foreach ($countries as $country)
+                                                                @if ( Config::get('app.locale') == 'en')
+                                                                <option value="{{ $country->id }}">{{ $country->country_name_en }}</option>
+                                                                @else
+                                                                <option value="{{ $country->id }}">{{ $country->country_name_ua }}</option>
+                                                                @endif
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
                                             @auth
                                             <div class="field">
                                                 <label class="checkbox">

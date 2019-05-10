@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 use View;
 use Auth;
 use Exception;
+use Carbon\Carbon;
 
 use App\User;
 use App\Subscriber;
 use App\System;
+use App\Country;
 
 class SubscriberController extends Controller
 {
@@ -49,7 +51,29 @@ class SubscriberController extends Controller
 
         $currentUser = User::find($id);
 
-        return View::make('user.subscriber-statistics')->with(['currentUser' => $currentUser]);
+        // calculating optimal angle for solar panels
+
+        $subscriber = Subscriber::where('user_id', $id)->first();
+        $country = Country::find($subscriber->country_id);
+        $currentMonth = Carbon::now()->month;
+
+        if ($currentMonth >= 5 && $currentMonth <= 10) {
+            // formula for tilt angle for summer
+            if ($country->hemisphere == "N") {
+                $angle = $country->latitude - 15;
+            } else {
+                $angle = $country->latitude + 15;
+            }
+        } else {
+            // formula for tilt angle for winter
+            if ($country->hemisphere == "N") {
+                $angle = $country->latitude + 15;
+            } else {
+                $angle = $country->latitude - 15;
+            }
+        }
+
+        return View::make('user.subscriber-statistics')->with(['currentUser' => $currentUser])->with(['country' => $country])->with(['angle' => $angle]);
     }
 
     public function edit($id)
@@ -98,7 +122,9 @@ class SubscriberController extends Controller
 
         $currentUser = User::find($id);
 
-        return View::make('user.subscriber-edit')->with(['currentUser' => $currentUser]);
+        $countries = Country::all(); 
+
+        return View::make('user.subscriber-edit')->with(['currentUser' => $currentUser])->with(['countries' => $countries]);
     }
 
     public function addSubmit(Request $request, $id)
