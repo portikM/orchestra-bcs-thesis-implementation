@@ -190,7 +190,7 @@
                                                     <input id="postal_code" type="text" class="input is-tablet" name="postal_code" required autocomplete="postal_code" value="{{ $subscriber->postal_code ?? '' }}" placeholder="@lang('content/user/subscriber-edit.postal_code_placeholder')">
                                                 </div>
                                             </div>
-                                            @if(!Auth::user()->subscriber)
+                                            @if(Auth::user() && !Auth::user()->subscriber)
                                             <div class="field">
                                                 <div class="control">
                                                     <div class="select">
