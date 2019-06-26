@@ -1,6 +1,7 @@
 # Orchestra
 
-Orchestra is a web application for remote control over power supply of the house from alternative sources of energy.   
+Orchestra is a web application for remote control over power supply of the house from alternative sources of energy.    
+[See it live](http://orchestra.portimaksym.com/).
 
 ## Setting Up
 
