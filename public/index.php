@@ -19,9 +19,9 @@ define('LARAVEL_START', microtime(true));
 | into the script here so that we don't have to worry about manual
 | loading any of our classes later on. It feels great to relax.
 |
-*/
+ */
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../../orchestra_laravel/vendor/autoload.php'; 
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +33,15 @@ require __DIR__.'/../vendor/autoload.php';
 | will load up this application so that we can run it and send
 | the responses back to the browser and delight our users.
 |
-*/
+ */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once __DIR__ . '/../../orchestra_laravel/bootstrap/app.php';
+
+// rebind public_path()
+
+$app->bind('path.public', function () {
+    return __DIR__;
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +53,7 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 | the client's browser allowing them to enjoy the creative
 | and wonderful application we have prepared for them.
 |
-*/
+ */
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 

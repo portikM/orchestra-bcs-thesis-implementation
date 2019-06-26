@@ -49,7 +49,7 @@
 
 body {
   min-height: 100vh;
-  background-image: url(/images/bg.png?a3e462eea67ed33e8070b657f24a43fe);
+  background-image: url("../images/bg.png");
   background-repeat: repeat;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .hero {
-  background-image: url(/images/hero.jpg?c5a89b5eb01611737e1ecc5ffb532ac9);
+  background-image: url("../images/hero.jpg");
   background-position: center;
   background-size: cover;
 }
